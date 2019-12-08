@@ -1,0 +1,22 @@
+﻿<UserControl x:Class="ITUCLock.Views.alarm"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:ITUCLock.Views"
+             xmlns:views="clr-namespace:ITUCLock.ViewModels"
+             mc:Ignorable="d" 
+             d:DesignHeight="287" d:DesignWidth="310">
+    <Grid Background="#FF4F4F4F">
+        <TextBlock Text="Alarm" VerticalAlignment="Top" Margin="121,17,96,0" FontFamily="Arial" FontSize="24" Foreground="#E5E5E5" Height="48"/>
+        <StackPanel>
+            <Button x:Name="AddButton" Content="+" Margin="265,14,-1,237" Foreground="#FF4F4F4F" BorderBrush="{x:Null}" FontFamily="Arial" FontWeight="Bold" FontSize="20" Height="26" RenderTransformOrigin="0.46,0.98" Click="AddButtonClicked"/>
+        </StackPanel>
+        <StackPanel Margin="0,0,0,227">
+            <Button x:Name="backButton" Content="b" Margin="0,14,264,237" Foreground="#FF4F4F4F" BorderBrush="{x:Null}" FontFamily="Arial" FontWeight="Bold" FontSize="20" Height="26" RenderTransformOrigin="0.46,0.98" Click="backButton_Clicked" Visibility="Collapsed"/>
+        </StackPanel>
+        <Grid Height="210" x:Name="boxalarm" Margin="30,66,25,11">
+			<local:alarmSetTimeDayView x:Name="alarmSetTimeDayView" Visibility="Collapsed"></local:alarmSetTimeDayView>
+		</Grid>
+    </Grid>
+</UserControl>

@@ -1,0 +1,109 @@
+﻿<UserControl x:Class="ITUCLock.Views.alarmSetTimeDayView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:ITUCLock.Views"
+             xmlns:views="clr-namespace:ITUCLock.ViewModels"
+             mc:Ignorable="d" 
+             d:DesignHeight="210" d:DesignWidth="250">
+    <Grid Background="#FF4F4F4F">
+
+        <StackPanel>
+            <Label x:Name="time_choose" Foreground="#E5E5E5" FontSize="50" FontFamily="Arial" HorizontalAlignment="Center" Content="00:00" Width="136" />
+        </StackPanel>
+        <StackPanel Orientation="Horizontal">
+            <Button x:Name="po" Content="M" Foreground="#FFE5E5E5" Width="34">
+                <Button.Template>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Grid Height="34">
+                            <Ellipse Fill="#FF36353A"/>
+                            <ContentPresenter Content="{TemplateBinding Content}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Grid>
+                    </ControlTemplate>
+                </Button.Template>
+            </Button>
+            <Button x:Name="Ut" Content="T" Foreground="#FFE5E5E5" Width="34" Height="34">
+                <Button.Template>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Grid>
+                            <Ellipse Fill="#FF36353A"/>
+                            <ContentPresenter Content="{TemplateBinding Content}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Grid>
+                    </ControlTemplate>
+                </Button.Template>
+            </Button>
+            <Button x:Name="St" Content="W" Foreground="#FFE5E5E5" Width="34" Height="34">
+                <Button.Template>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Grid>
+                            <Ellipse Fill="#FF36353A"/>
+                            <ContentPresenter Content="{TemplateBinding Content}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Grid>
+                    </ControlTemplate>
+                </Button.Template>
+            </Button>
+            <Button x:Name="ct" Content="T" Foreground="#FFE5E5E5" Width="34" Height="34">
+                <Button.Template>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Grid>
+                            <Ellipse Fill="#FF36353A"/>
+                            <ContentPresenter Content="{TemplateBinding Content}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Grid>
+                    </ControlTemplate>
+                </Button.Template>
+            </Button>
+            <Button x:Name="pa" Content="F" Foreground="#FFE5E5E5" Width="34" Height="34">
+                <Button.Template>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Grid>
+                            <Ellipse Fill="#FF36353A"/>
+                            <ContentPresenter Content="{TemplateBinding Content}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Grid>
+                    </ControlTemplate>
+                </Button.Template>
+            </Button>
+            <Button x:Name="so" Content="S" Foreground="#FFE5E5E5" Width="34" Height="34">
+                <Button.Template>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Grid>
+                            <Ellipse Fill="#FF36353A"/>
+                            <ContentPresenter Content="{TemplateBinding Content}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Grid>
+                    </ControlTemplate>
+                </Button.Template>
+            </Button>
+            <Button x:Name="ne" Content="S" Foreground="#FFE5E5E5" Width="34" Height="34">
+                <Button.Template>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Grid>
+                            <Ellipse Fill="#FF36353A"/>
+                            <ContentPresenter Content="{TemplateBinding Content}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Grid>
+                    </ControlTemplate>
+                </Button.Template>
+            </Button>
+        </StackPanel>
+        <StackPanel Margin="-4,143,4,10">
+            <Button x:Name="Save"  Height="38" Content="Save" FontFamily="Arial" Foreground="#FF36353A" Click="SaveButtonClicked" Margin="77,0,82,0" >
+                <Button.Template>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Grid>
+                            <Rectangle Fill="#FFF5D178" RadiusY="19.25" RadiusX="19.25"/>
+                            <ContentPresenter Content="{TemplateBinding Content}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Grid>
+                    </ControlTemplate>
+                </Button.Template>
+            </Button>
+        </StackPanel>
+        <Grid x:Name="boxalarm">
+            <local:alarmExist x:Name="alarmExistView" Visibility="Collapsed"></local:alarmExist>
+        </Grid>
+
+
+
+
+
+    </Grid>
+
+</UserControl>

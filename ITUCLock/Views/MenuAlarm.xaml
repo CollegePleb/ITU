@@ -1,0 +1,47 @@
+﻿<Window x:Class="ITUCLock.Views.MenuAlarm"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:ITUCLock.Views"
+      mc:Ignorable="d" 
+      d:DesignHeight="70" d:DesignWidth="210"
+      Title="MenuAlarm" WindowStyle="None">
+
+	<Grid>
+		<Grid Background="#FF36353A" Height="70" Width="210" Margin="-3,-4,-5,-4">
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition Width="152*"/>
+				<ColumnDefinition Width="59*"/>
+			</Grid.ColumnDefinitions>
+			<Button x:Name="Delete" Content="Delete" Margin="118,21,17,22" FontFamily="Arial" Foreground="White" Grid.ColumnSpan="2">
+
+				<Button.Template>
+					<ControlTemplate TargetType="{x:Type Button}">
+						<Grid>
+							<Rectangle Fill="#D62839" RadiusY="14.5" RadiusX="14.5"  />
+							<ContentPresenter Content="{TemplateBinding Content}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+						</Grid>
+					</ControlTemplate>
+				</Button.Template>
+			</Button>
+			<Button x:Name="btnSwitch"  Content="On" Margin="17,20,59.5,23" FontFamily="Arial"  Background="Black" Foreground="#FF36353A" Click="Switch_Clicked" >
+
+				<Button.Template>
+					<ControlTemplate TargetType="{x:Type Button}">
+						<Grid>
+							<Rectangle Fill="#FFF5D178" RadiusY="14" RadiusX="14"/>
+							<ContentPresenter Content="{TemplateBinding Content}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+						</Grid>
+					</ControlTemplate>
+				</Button.Template>
+
+
+			</Button>
+
+
+
+		</Grid>
+
+	</Grid>
+</Window>
